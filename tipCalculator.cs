@@ -12,6 +12,7 @@ public class tipCalculator : MonoBehaviour
     void Start()
     {
         textMeshPro = GetComponent<TextMeshProUGUI>();
+        textMeshPro.text = $"Amount: {amount}";
     }
 
     // Update is called once per frame
@@ -25,6 +26,6 @@ public class tipCalculator : MonoBehaviour
         float tipAmount = (float) amount * percentage;
         int totalAmount = (int) tipAmount + amount;
         
-        textMeshPro.text = $"TotalAmount: {totalAmount}";
+        textMeshPro.text = $"Amount: {amount}\nTotal Amount: {totalAmount}";
     }
 }
